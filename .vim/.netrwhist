@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/cristian'
+let g:netrw_dirhist_1='/home/cristian/shortcutKG'
+let g:netrw_dirhist_0='/home/cristian'
+let g:netrw_dirhist_9='/media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/OLD/V3.0 JC'
+let g:netrw_dirhist_8='/home/cristian/OvumiaTrainNFS/OVUMIA/FASE_1/1. PRE-PROCESSING/OLD/V3.0 JC'
+let g:netrw_dirhist_7='/home/cristian/OvumiaTrainNFS/OVUMIA/FASE_1/1. PRE-PROCESSING/OLD'
+let g:netrw_dirhist_6='/home/cristian/OvumiaTrainNFS/OVUMIA/FASE_1/1. PRE-PROCESSING'
+let g:netrw_dirhist_5='/home/cristian/OvumiaTrainNFS/OVUMIA/FASE_1'
+let g:netrw_dirhist_4='/home/cristian/OvumiaTrainNFS/OVUMIA'
+let g:netrw_dirhist_3='/home/cristian/OvumiaTrainNFS'
