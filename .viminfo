@@ -10,16 +10,31 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/\V\<append\>
+
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:q!
-|2,0,1616257432,,"q!"
 :q
-|2,0,1616257429,,"q"
+|2,0,1616277847,,"q"
+:Q
+|2,0,1616277846,,"Q"
 :wq
-|2,0,1616256976,,"wq"
+|2,0,1616277561,,"wq"
+:gv
+|2,0,1616277401,,"gv"
+:w
+|2,0,1616277187,,"w"
+:q!
+|2,0,1616276640,,"q!"
+:vd
+|2,0,1616260777,,"vd"
+:Vd
+|2,0,1616260774,,"Vd"
+:PlugInstall
+|2,0,1616275968,,"PlugInstall"
 :%w xclip -i -sel c
 |2,0,1616256826,,"%w xclip -i -sel c"
 :xclip -i -sel c
@@ -28,12 +43,8 @@ $
 |2,0,1616256805,,"%w !pbcopy"
 ::%w !pbcopy
 |2,0,1616256777,,":%w !pbcopy"
-:w
-|2,0,1616255424,,"w"
 :end
 |2,0,1616254440,,"end"
-:Q
-|2,0,1616252392,,"Q"
 :set -g default-terminal "xterm"
 |2,0,1616252138,,"set -g default-terminal \"xterm\""
 :colorscheme gruvbox
@@ -60,8 +71,6 @@ $
 |2,0,1616238168,,"colorscheme morning"
 :colorscheme blue
 |2,0,1616238158,,"colorscheme blue"
-:PlugInstall
-|2,0,1616238137,,"PlugInstall"
 :Q!
 |2,0,1616193293,,"Q!"
 :YcmRestart
@@ -70,10 +79,10 @@ $
 |2,0,1616192634,,"!PlugInstall"
 
 # Search String History (newest to oldest):
-??\a
-|2,1,1616254159,63,"\\a"
 ? @$
-|2,1,1616254159,,"@$"
+|2,1,1616275980,,"@$"
+??\a
+|2,1,1616260256,63,"\\a"
 ?/.vim/plugged/YouCompleteMe'
 |2,1,1616193438,47,".vim/plugged/YouCompleteMe'"
 
@@ -84,295 +93,459 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	alias tmux="TERM=screen-256color-bce tmux"
-|3,0,0,1,1,0,1616254159,"alias tmux=\"TERM=screen-256color-bce tmux\""
+"0	CHAR	0
+	.append(imageObj)
+	                self.boundingBoxe
+|3,0,0,0,2,0,1616275980,".append(imageObj)","                self.boundingBoxe"
 ""1	LINE	0
-	
-|3,1,1,1,1,0,1616254511,""
+	    vmap <Tab> > gv
+	    vmap <S-Tab> < gv=gv
+|3,1,1,1,2,0,1616277517,"    vmap <Tab> > gv","    vmap <S-Tab> < gv=gv"
 "2	LINE	0
-	
-|3,0,2,1,1,0,1616254492,""
+	set macmeta
+|3,0,2,1,1,0,1616277030,"set macmeta"
 "3	LINE	0
-	
-|3,0,3,1,1,0,1616254159,""
+	set macmeta
+|3,0,3,1,1,0,1616276646,"set macmeta"
 "4	LINE	0
-	
-|3,0,4,1,1,0,1616252410,""
+	set macmeta=yes
+|3,0,4,1,1,0,1616276623,"set macmeta=yes"
 "5	LINE	0
-	alias tmux="TERM=screen-256color-bce tmux"
-|3,0,5,1,1,0,1616252401,"alias tmux=\"TERM=screen-256color-bce tmux\""
+	
+|3,0,5,1,1,0,1616275980,""
 "6	LINE	0
 	
-|3,0,6,1,1,0,1616252345,""
+|3,0,6,1,1,0,1616275979,""
 "7	LINE	0
-	word-separators " "
-|3,0,7,1,1,0,1616252337,"word-separators \" \""
+	     vnoremap <A-j>: m'>+1<CR>gv=gv
+|3,0,7,1,1,0,1616261542,"     vnoremap <A-j>: m'>+1<CR>gv=gv"
 "8	LINE	0
-	visual-silence off
-|3,0,8,1,1,0,1616252336,"visual-silence off"
+	     vnoremap K: m<<
+|3,0,8,1,1,0,1616260564,"     vnoremap K: m<<"
 "9	LINE	0
-	visual-bell off
-|3,0,9,1,1,0,1616252336,"visual-bell off"
+	     vnoremap K: m<<
+|3,0,9,1,1,0,1616260550,"     vnoremap K: m<<"
 "-	CHAR	0
-	t
-|3,0,36,0,1,0,1616238609,"t"
+	:
+|3,0,36,0,1,0,1616261437,":"
 
 # File marks:
-'0  1  7  ~/DotFiles/install.sh
-|4,48,1,7,1616257432,"~/DotFiles/install.sh"
-'1  1  0  ~/.vimrc
-|4,49,1,0,1616257179,"~/.vimrc"
-'2  1  0  ~/.vimrc
-|4,50,1,0,1616257175,"~/.vimrc"
-'3  22  15  ~/.tmux.conf
-|4,51,22,15,1616256976,"~/.tmux.conf"
-'4  1  0  ~/.ssh/id_rsa.pub
-|4,52,1,0,1616256886,"~/.ssh/id_rsa.pub"
-'5  1  9  ~/.ssh/id_rsa.pub
-|4,53,1,9,1616256800,"~/.ssh/id_rsa.pub"
-'6  1  0  ~/.ssh/id_rsa.pub
-|4,54,1,0,1616256791,"~/.ssh/id_rsa.pub"
-'7  1  0  ~/.ssh/id_rsa.pub
-|4,55,1,0,1616256791,"~/.ssh/id_rsa.pub"
-'8  43  31  ~/.tmux.conf
-|4,56,43,31,1616256173,"~/.tmux.conf"
-'9  43  31  ~/.tmux.conf
-|4,57,43,31,1616256173,"~/.tmux.conf"
+'0  1  0  ~/install.sh
+|4,48,1,0,1616277847,"~/install.sh"
+'1  1  0  ~/.DotFiles/install.sh
+|4,49,1,0,1616277814,"~/.DotFiles/install.sh"
+'2  1  0  ~/.DotFiles/install.sh
+|4,50,1,0,1616277808,"~/.DotFiles/install.sh"
+'3  74  4  ~/.vimrc
+|4,51,74,4,1616277561,"~/.vimrc"
+'4  75  20  ~/.vimrc
+|4,52,75,20,1616277528,"~/.vimrc"
+'5  75  20  ~/.vimrc
+|4,53,75,20,1616277528,"~/.vimrc"
+'6  76  23  ~/.vimrc
+|4,54,76,23,1616277470,"~/.vimrc"
+'7  75  23  ~/.vimrc
+|4,55,75,23,1616277470,"~/.vimrc"
+'8  76  23  ~/.vimrc
+|4,56,76,23,1616277470,"~/.vimrc"
+'9  75  23  ~/.vimrc
+|4,57,75,23,1616277470,"~/.vimrc"
 
 # Jumplist (newest first):
--'  1  7  ~/DotFiles/install.sh
-|4,39,1,7,1616257432,"~/DotFiles/install.sh"
+-'  1  0  ~/install.sh
+|4,39,1,0,1616277847,"~/install.sh"
+-'  1  0  ~/.DotFiles/install.sh
+|4,39,1,0,1616277814,"~/.DotFiles/install.sh"
+-'  1  0  ~/.DotFiles/install.sh
+|4,39,1,0,1616277814,"~/.DotFiles/install.sh"
+-'  1  0  ~/.DotFiles/install.sh
+|4,39,1,0,1616277808,"~/.DotFiles/install.sh"
+-'  1  0  ~/.DotFiles/install.sh
+|4,39,1,0,1616277808,"~/.DotFiles/install.sh"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
+-'  74  4  ~/.vimrc
+|4,39,74,4,1616277561,"~/.vimrc"
 -'  1  0  ~/.vimrc
-|4,39,1,0,1616257179,"~/.vimrc"
+|4,39,1,0,1616277529,"~/.vimrc"
 -'  1  0  ~/.vimrc
-|4,39,1,0,1616257175,"~/.vimrc"
--'  22  15  ~/.tmux.conf
-|4,39,22,15,1616256976,"~/.tmux.conf"
--'  22  15  ~/.tmux.conf
-|4,39,22,15,1616256976,"~/.tmux.conf"
--'  22  15  ~/.tmux.conf
-|4,39,22,15,1616256976,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616256966,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616256966,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616256966,"~/.tmux.conf"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256886,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256886,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256886,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256886,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256886,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256886,"~/.ssh/id_rsa.pub"
--'  1  9  ~/.ssh/id_rsa.pub
-|4,39,1,9,1616256800,"~/.ssh/id_rsa.pub"
--'  1  9  ~/.ssh/id_rsa.pub
-|4,39,1,9,1616256800,"~/.ssh/id_rsa.pub"
--'  1  9  ~/.ssh/id_rsa.pub
-|4,39,1,9,1616256800,"~/.ssh/id_rsa.pub"
--'  1  9  ~/.ssh/id_rsa.pub
-|4,39,1,9,1616256800,"~/.ssh/id_rsa.pub"
--'  1  9  ~/.ssh/id_rsa.pub
-|4,39,1,9,1616256800,"~/.ssh/id_rsa.pub"
--'  1  9  ~/.ssh/id_rsa.pub
-|4,39,1,9,1616256800,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256791,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256791,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256791,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256791,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256791,"~/.ssh/id_rsa.pub"
--'  1  0  ~/.ssh/id_rsa.pub
-|4,39,1,0,1616256791,"~/.ssh/id_rsa.pub"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  43  31  ~/.tmux.conf
-|4,39,43,31,1616256173,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  1  0  ~/.tmux.conf
-|4,39,1,0,1616255327,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
--'  64  51  ~/.tmux.conf
-|4,39,64,51,1616255203,"~/.tmux.conf"
+|4,39,1,0,1616277529,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277529,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277529,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277529,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277529,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277529,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277529,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  75  20  ~/.vimrc
+|4,39,75,20,1616277528,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  73  41  ~/.vimrc
+|4,39,73,41,1616277521,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277471,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  76  23  ~/.vimrc
+|4,39,76,23,1616277470,"~/.vimrc"
+-'  75  23  ~/.vimrc
+|4,39,75,23,1616277470,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1616277391,"~/.vimrc"
+-'  75  4  ~/.vimrc
+|4,39,75,4,1616277390,"~/.vimrc"
+-'  75  4  ~/.vimrc
+|4,39,75,4,1616277390,"~/.vimrc"
+-'  75  4  ~/.vimrc
+|4,39,75,4,1616277390,"~/.vimrc"
+-'  75  4  ~/.vimrc
+|4,39,75,4,1616277390,"~/.vimrc"
+-'  75  4  ~/.vimrc
+|4,39,75,4,1616277390,"~/.vimrc"
+-'  75  4  ~/.vimrc
+|4,39,75,4,1616277390,"~/.vimrc"
+-'  75  4  ~/.vimrc
+|4,39,75,4,1616277390,"~/.vimrc"
 
 # History of marks within files (newest to oldest):
 
-> ~/DotFiles/install.sh
-	*	1616257429	0
-	"	1	7
-	^	1	8
-	.	1	7
-	+	1	7
+> ~/install.sh
+	*	1616277846	0
+	"	1	0
+
+> ~/.DotFiles/install.sh
+	*	1616277813	0
+	"	1	0
+	^	5	29
+	.	5	28
+	+	1	27
+	+	2	0
+	+	2	29
+	+	3	21
+	+	3	24
+	+	4	27
+	+	5	28
 
 > ~/.vimrc
-	*	1616257179	0
+	*	1616277559	0
+	"	74	4
+	^	75	21
+	.	1	0
+	+	65	58
+	+	65	57
+	+	66	20
+	+	36	0
+	+	29	50
+	+	36	19
+	+	29	0
+	+	30	0
+	+	29	34
+	+	36	19
+	+	31	0
+	+	13	0
+	+	13	17
+	+	13	0
+	+	61	4
+	+	62	3
+	+	57	0
+	+	59	5
+	+	60	5
+	+	13	17
+	+	42	0
+	+	46	4
+	+	13	0
+	+	13	39
+	+	64	31
+	+	65	22
+	+	44	49
+	+	45	0
+	+	1	0
+	+	66	31
+	+	66	0
+	+	66	17
+	+	66	18
+	+	66	32
+	+	71	3
+	+	73	45
+	+	72	41
+	+	67	0
+	+	31	4
+	+	13	17
+	+	32	24
+	+	73	42
+	+	67	0
+	+	2	15
+	+	2	0
+	+	67	15
+	+	68	14
+	+	69	14
+	+	70	14
+	+	71	14
+	+	67	14
+	+	68	13
+	+	69	15
+	+	71	13
+	+	73	15
+	+	72	13
+	+	70	13
+	+	2	0
+	+	67	4
+	+	66	4
+	+	49	20
+	+	49	101
+	+	49	181
+	+	49	261
+	+	49	341
+	+	49	421
+	+	49	19
+	+	49	100
+	+	49	180
+	+	49	0
+	+	76	0
+	+	73	65
+	+	76	25
+	+	2	0
+	+	13	17
+	+	13	38
+	+	13	39
+	+	13	52
+	+	13	53
+	+	13	67
+	+	13	0
+	+	2	0
+	+	73	46
+	+	76	4
+	+	1	0
+	+	73	64
+	+	76	23
+	+	1	0
+	+	73	61
+	+	73	59
+	+	75	21
+	+	1	0
+
+> ~/.DotFiles/NERD_tree_1
+	*	1616276336	0
+	"	101	13
+	.	1	0
+	+	1	0
+
+> ~/.DotFiles/NERD_tree_2
+	*	1616276333	0
+	"	116	2
+	.	1	0
+	+	1	0
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/CropPN/pronucrop.py
+	*	1616276332	0
+	"	185	0
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/preproDatapath.py
+	*	1616276162	0
 	"	1	0
-	^	26	20
-	.	23	0
-	+	60	58
-	+	60	57
-	+	61	20
-	+	26	0
-	+	21	50
-	+	26	19
-	+	21	0
-	+	22	0
-	+	21	34
-	+	26	19
-	+	23	0
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/CellDetection/Sample.py
+	*	1616262132	0
+	"	52	41
+	.	46	0
+	+	49	0
+	+	46	0
+
+> /usr/share/vim/vim81/doc/map.txt
+	*	1616261221	0
+	"	68	44
+
+> /usr/share/vim/vim81/doc/options.txt
+	*	1616261046	0
+	"	24	13
+
+> /usr/share/vim/vim81/doc/pattern.txt
+	*	1616260971	0
+	"	1049	0
+
+> ~/.vimrc~
+	*	1616260598	0
+	"	1	0
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/EmbryoCrop/models/cascadeEmbryoCrop.xml
+	*	1616259781	0
+	"	33	0
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/EmbryoCrop/EmbryoCrop.py
+	*	1616259771	0
+	"	9	30
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/EmbryoCrop/Image.py
+	*	1616259741	0
+	"	279	7
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/EmbryoCrop/__init__.py
+	*	1616259707	0
+	"	1	0
+
+> ~/.DotFiles/undotree_2
+	*	1616259655	0
+	"	3	20
+	.	3	0
+	+	3	0
+
+> ~/.DotFiles/diffpanel_3
+	*	1616259650	0
+	"	1	0
+	.	2	0
+	+	2	0
 
 > ~/.tmux.conf
-	*	1616256976	0
-	"	22	15
-	^	22	16
-	.	22	15
+	*	1616258484	0
+	"	22	14
+	^	22	15
+	.	22	14
 	+	1	40
 	+	1	0
 	+	1	22
@@ -394,7 +567,21 @@ $
 	+	65	0
 	+	51	34
 	+	49	31
-	+	22	15
+	+	22	14
+
+> /media/OvumiaTrain/OVUMIA/FASE_1/3. KG/kennyg/KGdebug.py
+	*	1616258298	0
+	"	10	7
+	^	10	8
+	.	10	7
+	+	10	7
+
+> ~/DotFiles/install.sh
+	*	1616257429	0
+	"	1	7
+	^	1	8
+	.	1	7
+	+	1	7
 
 > ~/.ssh/id_rsa.pub
 	*	1616256826	0
@@ -414,17 +601,9 @@ $
 	*	1616252392	0
 	"	1	0
 
-> /media/OvumiaTrain/OVUMIA/FASE_1/3. KG/kennyg/KGdebug.py
-	*	1616239439	0
-	"	1	0
-
 > /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/OLD/V3.0 JC/cascade.xml
 	*	1616239383	0
 	"	1	0
-
-> /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/preproDatapath.py
-	*	1616238712	0
-	"	4	0
 
 > /media/OvumiaTrain/OVUMIA/FASE_1/1. PRE-PROCESSING/preprocessing/Makefile
 	*	1616238557	0
