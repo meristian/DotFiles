@@ -1,4 +1,6 @@
 syntax on
+let python_highlight_all=1
+set guicursor=i:
 set noerrorbells
 set tabstop =4 softtabstop=4
 set shiftwidth=4
@@ -6,6 +8,7 @@ set expandtab
 set smartindent
 set nu
 set nowrap
+set scrolloff=15
 set smartcase
 set noswapfile
 set nobackup
@@ -31,7 +34,11 @@ Plug '~/.vim/plugged/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'preservim/nerdtree'
+Plug 'vim-syntastic/syntastic'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
+
 
 colorscheme gruvbox                                                             
 set background=dark    
@@ -61,8 +68,8 @@ if executable('rg')
     nnoremap <Leader>- :vertical resize -5<CR>                                      
     " YMC                                                                           
     "                                                                          
-    nnoremap<silent><Leader>gd : YmcCompleter GoTo<CR>                              
-    nnoremap<silent><Leader>gf : YmcCompleter FixIt<CR>    
+    nnoremap<silent><Leader>gd : YcmCompleter GoTo<CR>                              
+    nnoremap<silent><Leader>gf : YcmCompleter FixIt<CR>    
     " Move things up and down
     nnoremap <A-j> :m .+1<CR>==
     nnoremap <A-k> :m .-2<CR>==
