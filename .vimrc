@@ -17,6 +17,7 @@ set undodir=~/.vim/undodir
 set undofile 
 set clipboard=unnamed
 
+set lazyredraw
 set incsearch
 
 set nohlsearch
@@ -25,6 +26,8 @@ set relativenumber
 set colorcolumn=80
 set signcolumn=yes
 set updatetime=50
+
+
 
 highlight ColorColum ctermbg=0 guibg=lightgrey
 
@@ -39,6 +42,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Chiel92/vim-autoformat'
+Plug 'cohama/lexima.vim'
 call plug#end()
 
 
@@ -74,16 +78,20 @@ if executable('rg')
     nnoremap<silent><Leader>gf : YcmCompleter FixIt<CR>    
     nnoremap<silent><Leader>gr : YcmCompleter GoToReferences<CR>    
     " Remap Ctrl-O to save when jumping back
-    nnoremap <C-o> :execute 'update'<CR> <C-o> 
+    nnoremap <silent> <C-o> :execute 'silent! update'<CR> <C-o> 
 
+    
     " Move things up and down
-    nnoremap <A-j> :m .+1<CR>==
-    nnoremap <A-k> :m .-2<CR>==
-    inoremap <A-j> <Esc>:m .+1<CR>==gi
-    inoremap <A-k> <Esc>:m .-2<CR>==gi
-    vnoremap <A-j> :m '>+1<CR>gv=gv
-    vnoremap <A-k> :m '<-2<CR>gv=gv
+    " This mapping depends on wether you are in mac or in other os 
+    nnoremap <Esc>j :m .+1<CR>==
+    nnoremap <Esc>k :m .-2<CR>==
+    inoremap <Esc>j <Esc>:m .+1<CR>==gi
+    inoremap <Esc>k <Esc>:m .-2<CR>==gi
+    vnoremap <Esc>j :m '>+1<CR>gv=gv
+    vnoremap <Esc>k :m '<-2<CR>gv=gv1
     " Indent visual with tab and shift tab
     vmap <Tab> > gv
     vmap <S-Tab> < gv
     autocmd BufWritePost *.py Autoformat
+
+
