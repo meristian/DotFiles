@@ -9,6 +9,7 @@ set smartindent
 set nu
 set nowrap
 set scrolloff=15
+set ignorecase
 set smartcase
 set noswapfile
 set nobackup
@@ -62,7 +63,7 @@ if executable('rg')
     nnoremap <leader>u :UndotreeShow<CR>                                            
     nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>            
     nnoremap <Leader>ps :Rg<SPACE>                                                  
-    nnoremap <C-p> :GFiles<CR>                                                      
+    nnoremap <silent> <C-p> :execute 'silent! update' <Bar>:GFiles<CR>
     nnoremap <Leader>pf :Files<CR>                                                  
     nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>                           
     nnoremap <Leader>+ :vertical resize +5<CR>                                      
@@ -72,6 +73,9 @@ if executable('rg')
     nnoremap<silent><Leader>gd : YcmCompleter GoTo<CR>                              
     nnoremap<silent><Leader>gf : YcmCompleter FixIt<CR>    
     nnoremap<silent><Leader>gr : YcmCompleter GoToReferences<CR>    
+    " Remap Ctrl-O to save when jumping back
+    nnoremap <C-o> :execute 'update'<CR> <C-o> 
+
     " Move things up and down
     nnoremap <A-j> :m .+1<CR>==
     nnoremap <A-k> :m .-2<CR>==
