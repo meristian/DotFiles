@@ -71,6 +71,7 @@ if executable('rg')
     "                                                                          
     nnoremap<silent><Leader>gd : YcmCompleter GoTo<CR>                              
     nnoremap<silent><Leader>gf : YcmCompleter FixIt<CR>    
+    nnoremap<silent><Leader>gr : YcmCompleter GoToReferences<CR>    
     " Move things up and down
     nnoremap <A-j> :m .+1<CR>==
     nnoremap <A-k> :m .-2<CR>==
@@ -81,3 +82,4 @@ if executable('rg')
     " Indent visual with tab and shift tab
     vmap <Tab> > gv
     vmap <S-Tab> < gv
+    autocmd BufWritePost *.py Autoformat
