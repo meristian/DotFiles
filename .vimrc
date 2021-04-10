@@ -23,6 +23,8 @@ set incsearch
 set nohlsearch
 set relativenumber
 
+set encoding=UTF-8
+
 set colorcolumn=80
 set signcolumn=yes
 set updatetime=50
@@ -43,8 +45,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Chiel92/vim-autoformat'
 Plug 'cohama/lexima.vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+nnoremap ; :
 
 colorscheme gruvbox                                                             
 set background=dark    
@@ -83,12 +87,12 @@ if executable('rg')
     
     " Move things up and down
     " This mapping depends on wether you are in mac or in other os 
-    nnoremap <Esc>j :m .+1<CR>==
-    nnoremap <Esc>k :m .-2<CR>==
-    inoremap <Esc>j <Esc>:m .+1<CR>==gi
-    inoremap <Esc>k <Esc>:m .-2<CR>==gi
-    vnoremap <Esc>j :m '>+1<CR>gv=gv
-    vnoremap <Esc>k :m '<-2<CR>gv=gv1
+    nnoremap ¶ :m .+1<CR>==
+    nnoremap § :m .-2<CR>==
+    inoremap ¶ <Esc>:m .+1<CR>==gi
+    inoremap § <Esc>:m .-2<CR>==gi
+    vnoremap ¶ :m '>+1<CR>gv=gv
+    vnoremap § :m '<-2<CR>gv=gv1
     " Indent visual with tab and shift tab
     vmap <Tab> > gv
     vmap <S-Tab> < gv
