@@ -38,6 +38,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug '~/.vim/plugged/YouCompleteMe'
 Plug 'mbbill/undotree'
+Plug 'lervag/vimtex'
 "Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
@@ -99,3 +100,9 @@ if executable('rg')
     autocmd BufWritePost *.py Autoformat
 
 
+
+" settings for sumatraPDF
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_options
+    \ = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
