@@ -38,7 +38,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug '~/.vim/plugged/YouCompleteMe'
 Plug 'mbbill/undotree'
-Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf.vim'
