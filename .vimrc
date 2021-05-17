@@ -16,6 +16,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile 
 set clipboard=unnamed
+" Prevent the preview scratch suggestion from appearing
+set completeopt-=preview        
 
 set lazyredraw
 set incsearch
