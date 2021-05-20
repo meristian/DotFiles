@@ -30,7 +30,6 @@ set signcolumn=yes
 set updatetime=50
 
 
-
 highlight ColorColum ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
@@ -58,6 +57,8 @@ if executable('rg')
     endif
 
     let loaded_matchparen = 1
+    let g:formatter_yapf_style = 'pep8'
+
 
     let g:netrw_browse_split = 2
     let g:vrfr_rg = 'true'
@@ -102,7 +103,7 @@ if executable('rg')
 
 
 " settings for sumatraPDF
-let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
