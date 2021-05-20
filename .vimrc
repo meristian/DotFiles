@@ -38,7 +38,7 @@ highlight ColorColum ctermbg=0 guibg=lightgrey
 call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug '~/.vim/plugged/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'lervag/vimtex'
 "Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
