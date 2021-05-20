@@ -18,6 +18,7 @@ set undofile
 set clipboard=unnamed
 " Prevent the preview scratch suggestion from appearing
 set completeopt-=preview        
+:filetype plugin on
 
 set lazyredraw
 set incsearch
@@ -49,6 +50,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Chiel92/vim-autoformat'
 Plug 'cohama/lexima.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
 nnoremap ; :
