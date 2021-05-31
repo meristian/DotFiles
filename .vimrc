@@ -46,7 +46,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'Chiel92/vim-autoformat'
+Plug 'vim-autoformat/vim-autoformat'
 Plug 'cohama/lexima.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
@@ -61,7 +61,6 @@ if executable('rg')
     endif
 
     let loaded_matchparen = 1
-    let g:formatter_yapf_style = 'pep8'
 
 
     let g:netrw_browse_split = 2
@@ -105,7 +104,18 @@ if executable('rg')
     autocmd BufWritePost *.py Autoformat
 
 
+let g:autoformat_verbosemode=1
 
+let g:vimtex_compiler_latexmk = {
+    \ 'options' : [
+    \   '-pdf',
+    \   '-shell-escape',
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \ ],
+    \}
 " settings for sumatraPDF
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_general_options
