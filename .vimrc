@@ -105,6 +105,7 @@ if executable('rg')
 
 
 let g:autoformat_verbosemode=1
+let g:formatters_python = ['black']
 
 let g:vimtex_compiler_latexmk = {
     \ 'options' : [

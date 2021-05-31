@@ -5,7 +5,8 @@ brew install koekeishiya/formulae/skhd
 brew services start yabai 
 brew services start skhd
 # Python code formatter
-brew install autopep8
+brew install black
+pip3 install black
 
 # Enable instant switch between desktops
 
