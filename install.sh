@@ -2,7 +2,13 @@ ln -nfs ~/.DotFiles/.vimrc ~
 ln -nfs ~/.DotFiles/.tmux.conf ~
 ln -nfs ~/.DotFiles/.vim ~
 ln -nfs ~/.DotFiles/.viminfo ~
+
+# Tmux 
 tmux source-file ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source-file ~/.tmux.conf
+
+# Nvim
 mkdir ~/.config
 mkdir ~/.config/nvim/
 touch ~/.config/nvim/init.vim
@@ -23,5 +29,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim -c ':PlugInstall' -c "q"  -c "wq" ~/.vimrc
 
 sudo python3  ~/.vim/plugged/YouCompleteMe/install.py  
+
+
 
 

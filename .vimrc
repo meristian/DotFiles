@@ -52,6 +52,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
 call plug#end()
 
+
+" Show hidden files in NERDtree by default
+let NERDTreeShowHidden=1
+
 nnoremap ; :
 
 colorscheme gruvbox                                                             

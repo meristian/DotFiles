@@ -6,6 +6,8 @@ brew services start yabai
 brew services start skhd
 # Python code formatter
 brew install black
+brew install tmux
+
 pip3 install black
 
 # Enable instant switch between desktops
