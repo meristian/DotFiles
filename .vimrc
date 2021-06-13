@@ -47,9 +47,10 @@ Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-autoformat/vim-autoformat'
-Plug 'cohama/lexima.vim'
+"Plug 'cohama/lexima.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 nnoremap ; :
@@ -103,6 +104,7 @@ if executable('rg')
     vmap <S-Tab> < gv
     autocmd BufWritePost *.py Autoformat
 
+let g:syntastic_python_checkers = ['pylint']
 
 let g:autoformat_verbosemode=1
 let g:formatters_python = ['black']
