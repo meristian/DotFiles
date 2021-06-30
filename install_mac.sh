@@ -21,3 +21,6 @@ pip3 install pylint
 
 # System Preferences > Accessibility > Displays > Reduce motion
 
+
+# Vim compabilities with plugins
+brew install ripgrep

@@ -52,6 +52,7 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'jremmem/vim-ripgrep'
 " Symbols for git
 Plug 'mhinz/vim-signify'
 call plug#end()
@@ -115,6 +116,24 @@ if executable('rg')
     vmap <Tab> > gv
     vmap <S-Tab> < gv
     autocmd BufWritePost *.py Autoformat
+    autocmd BufWritePost *.json %!python3 -m json.tool
+
+
+" Get List of TODO's and FIXME's
+command! ShowTodoList call s:ShowTodoList()
+
+function! s:ShowTodoList()
+
+    let my_project = system('git rev-parse --show-toplevel')
+    " We have to do a cd to the current repository root
+    execute 'cd' my_project
+    silent grep 'TODO\\|FIXME\\|XXX' **/*.[hc]
+    cwindow
+    if &buftype == 'quickfix'
+    resize 10
+    let w:quickfix_title = 'To-do list for $my_project'
+    endif
+endfunction
 
 let g:syntastic_python_checkers = ['pylint']
 
