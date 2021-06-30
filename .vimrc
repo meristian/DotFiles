@@ -19,7 +19,7 @@ set clipboard=unnamed
 " Prevent the preview scratch suggestion from appearing
 set completeopt-=preview        
 :filetype plugin on
-
+let $PATH .= ":~/.DotFiles/remotecopy/"
 set lazyredraw
 set incsearch
 
@@ -31,6 +31,8 @@ set encoding=UTF-8
 set colorcolumn=80
 set signcolumn=yes
 set updatetime=50
+
+set shell=bash 
 
 
 highlight ColorColum ctermbg=0 guibg=lightgrey
@@ -52,9 +54,10 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'jremmem/vim-ripgrep'
 " Symbols for git
 Plug 'mhinz/vim-signify'
+" paste
+Plug 'justone/remotecopy-vim'
 call plug#end()
 
 
@@ -104,8 +107,10 @@ if executable('rg')
     nmap <leader>gs :G <CR> 
     "
     
+    nnoremap :q :qa
     " Move things up and down
     " This mapping depends on wether you are in mac or in other os 
+    
     nnoremap ¶ :m .+1<CR>==
     nnoremap § :m .-2<CR>==
     inoremap ¶ <Esc>:m .+1<CR>==gi

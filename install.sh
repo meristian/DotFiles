@@ -30,6 +30,4 @@ nvim -c ':PlugInstall' -c "q"  -c "wq" ~/.vimrc
 
 sudo python3  ~/.vim/plugged/YouCompleteMe/install.py  
 
-
-
-
+export PATH=$PATH:~/.DotFiles/remotecopy/
