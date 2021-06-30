@@ -41,7 +41,8 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'lervag/vimtex'
-"Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf.vim'
@@ -51,9 +52,14 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
 Plug 'jiangmiao/auto-pairs'
+" Symbols for git
+Plug 'mhinz/vim-signify'
 call plug#end()
 
-nnoremap ; :
+
+" Show hidden files in NERDtree by default
+let NERDTreeShowHidden=1
+
 
 colorscheme gruvbox                                                             
 set background=dark    
@@ -90,6 +96,12 @@ if executable('rg')
     " Remap Ctrl-O to save when jumping back
     nnoremap <silent> <C-o> :execute 'silent! update'<CR> <C-o> 
 
+    " Git integration maps
+    nmap <leader>gh :diffget //3 <CR>
+    nmap <leader>gu :diffget //2 <CR>
+    " get status
+    nmap <leader>gs :G <CR> 
+    "
     
     " Move things up and down
     " This mapping depends on wether you are in mac or in other os 

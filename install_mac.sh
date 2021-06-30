@@ -12,6 +12,8 @@ brew install --cask amethyst
 
 # Python code formatter
 brew install black
+brew install tmux
+
 pip3 install black
 pip3 install pylint
 

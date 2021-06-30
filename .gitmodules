@@ -1,6 +1,0 @@
-[submodule ".vim/YouCompleteMe"]
-	path = .vim/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe
-[submodule ".vim/plugged/YouCompleteMe"]
-	path = .vim/plugged/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe
