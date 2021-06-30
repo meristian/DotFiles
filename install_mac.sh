@@ -14,3 +14,6 @@ pip3 install black
 
 # System Preferences > Accessibility > Displays > Reduce motion
 
+
+# Vim compabilities with plugins
+brew install ripgrep
