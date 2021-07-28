@@ -22,7 +22,6 @@ set completeopt-=preview
 let $PATH .= ":~/.DotFiles/remotecopy/"
 set lazyredraw
 set incsearch
-
 set nohlsearch
 set relativenumber
 
@@ -40,7 +39,6 @@ highlight ColorColum ctermbg=0 guibg=lightgrey
 call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
@@ -58,6 +56,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 " paste
 Plug 'justone/remotecopy-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
@@ -107,7 +106,6 @@ if executable('rg')
     nmap <leader>gs :G <CR> 
     "
     
-    nnoremap :q :qa
     " Move things up and down
     " This mapping depends on wether you are in mac or in other os 
     
@@ -122,6 +120,19 @@ if executable('rg')
     vmap <S-Tab> < gv
     autocmd BufWritePost *.py Autoformat
     autocmd BufWritePost *.json %!python3 -m json.tool
+
+
+
+    " use <tab> for trigger completion and navigate to the next complete item
+    function! s:check_back_space() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~ '\s'
+    endfunction
+
+    inoremap <silent><expr> <Tab>
+          \ pumvisible() ? "\<C-n>" :
+          \ <SID>check_back_space() ? "\<Tab>" :
+          \ coc#refresh()
 
 
 " Get List of TODO's and FIXME's
