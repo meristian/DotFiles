@@ -1,0 +1,3 @@
+[submodule "remotecopy"]
+	path = remotecopy
+	url = https://github.com/justone/remotecopy

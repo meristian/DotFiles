@@ -19,10 +19,9 @@ set clipboard=unnamed
 " Prevent the preview scratch suggestion from appearing
 set completeopt-=preview        
 :filetype plugin on
-
+let $PATH .= ":~/.DotFiles/remotecopy/"
 set lazyredraw
 set incsearch
-
 set nohlsearch
 set relativenumber
 
@@ -32,13 +31,13 @@ set colorcolumn=80
 set signcolumn=yes
 set updatetime=50
 
+set shell=bash 
 
-highlight ColorColum ctermbg=0 guibg=lightgrey
+
 
 call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'mbbill/undotree'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
@@ -52,17 +51,22 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'jremmem/vim-ripgrep'
 " Symbols for git
 Plug 'mhinz/vim-signify'
+" paste
+Plug 'justone/remotecopy-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'puremourning/vimspector'
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'Pocco81/AutoSave.nvim'
 call plug#end()
-
 
 " Show hidden files in NERDtree by default
 let NERDTreeShowHidden=1
 
 
-colorscheme gruvbox                                                             
+colorscheme moonfly                                                             
+
 set background=dark    
 if executable('rg')
         let g:rg_derive_root='true'
@@ -89,13 +93,22 @@ if executable('rg')
     nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>                           
     nnoremap <Leader>+ :vertical resize +5<CR>                                      
     nnoremap <Leader>- :vertical resize -5<CR>                                      
-    " YMC                                                                           
-    "                                                                          
-    nnoremap<silent><Leader>gd : YcmCompleter GoTo<CR>                              
-    nnoremap<silent><Leader>gf : YcmCompleter FixIt<CR>    
+    "
+    " COC
+    function! s:GoToDefinition()
+      "execute("silent! update")
+      if CocAction('jumpDefinition')
+        return v:true
+      endif
+
+      let ret = execute("silent! normal \<C-]>")
+      if ret =~ "Error" || ret =~ "错误"
+        call searchdecl(expand('<cword>'))
+      endif
+    endfunction
+
+    nmap <silent>gd :call <SID>GoToDefinition()<CR>
     nnoremap<silent><Leader>gr : YcmCompleter GoToReferences<CR>    
-    " Remap Ctrl-O to save when jumping back
-    nnoremap <silent> <C-o> :execute 'silent! update'<CR> <C-o> 
 
     " Git integration maps
     nmap <leader>gh :diffget //3 <CR>
@@ -106,6 +119,7 @@ if executable('rg')
     
     " Move things up and down
     " This mapping depends on wether you are in mac or in other os 
+    
     nnoremap ¶ :m .+1<CR>==
     nnoremap § :m .-2<CR>==
     inoremap ¶ <Esc>:m .+1<CR>==gi
@@ -117,6 +131,18 @@ if executable('rg')
     vmap <S-Tab> < gv
     autocmd BufWritePost *.py Autoformat
     autocmd BufWritePost *.json %!python3 -m json.tool
+
+
+    " use <tab> for trigger completion and navigate to the next complete item
+    function! s:check_back_space() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~ '\s'
+    endfunction
+
+    inoremap <silent><expr> <Tab>
+          \ pumvisible() ? "\<C-n>" :
+          \ <SID>check_back_space() ? "\<Tab>" :
+          \ coc#refresh()
 
 
 " Get List of TODO's and FIXME's
@@ -155,3 +181,17 @@ let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+
+" Vimspector
+
+nnoremap <Leader>dd :call vimspector#Launch()<CR>
+nnoremap <Leader>de :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>dk <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <Leader>dl <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
