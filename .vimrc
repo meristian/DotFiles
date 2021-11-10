@@ -36,27 +36,19 @@ set shell=bash
 
 
 call plug#begin('~/.vim/plugged')
-Plug 'gruvbox-community/gruvbox'
-Plug 'sainnhe/gruvbox-material'
-Plug 'mbbill/undotree'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
-Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-autoformat/vim-autoformat'
-"Plug 'cohama/lexima.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'chrisbra/csv.vim'
-Plug 'jiangmiao/auto-pairs'
 " Symbols for git
 Plug 'mhinz/vim-signify'
-" paste
 Plug 'justone/remotecopy-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'puremourning/vimspector'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'Pocco81/AutoSave.nvim'
 call plug#end()
@@ -88,7 +80,7 @@ if executable('rg')
     nnoremap <leader>u :UndotreeShow<CR>                                            
     nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>            
     nnoremap <Leader>ps :Rg<SPACE>                                                  
-    nnoremap <silent> <C-p> :execute 'silent! update' <Bar>:GFiles<CR>
+    nnoremap <silent> <C-p> :GFiles<CR>
     nnoremap <Leader>pf :Files<CR>                                                  
     nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>                           
     nnoremap <Leader>+ :vertical resize +5<CR>                                      
@@ -96,7 +88,6 @@ if executable('rg')
     "
     " COC
     function! s:GoToDefinition()
-      "execute("silent! update")
       if CocAction('jumpDefinition')
         return v:true
       endif
@@ -146,7 +137,6 @@ if executable('rg')
 
 
 " Get List of TODO's and FIXME's
-command! ShowTodoList call s:ShowTodoList()
 
 function! s:ShowTodoList()
 
@@ -161,10 +151,8 @@ function! s:ShowTodoList()
     endif
 endfunction
 
-let g:syntastic_python_checkers = ['pylint']
-
 let g:autoformat_verbosemode=1
-let g:formatters_python = ['black']
+let g:formatters_python = ['autopep8']
 
 let g:vimtex_compiler_latexmk = {
     \ 'options' : [

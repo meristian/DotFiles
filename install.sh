@@ -18,6 +18,8 @@ echo "source ~/.vimrc" >> ~/.config/nvim/init.vim
 
 pip3 install black
 pip3 install --user --upgrade neovim
+pip3 install jedi==0.16.0
+sudo apt-get install python3-autopep8
 
 # Install plug
 
