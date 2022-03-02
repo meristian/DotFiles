@@ -152,7 +152,7 @@ function! s:ShowTodoList()
 endfunction
 
 let g:autoformat_verbosemode=1
-let g:formatters_python = ['autopep8']
+let g:formatters_python = ['black']
 
 let g:vimtex_compiler_latexmk = {
     \ 'options' : [
