@@ -14,40 +14,6 @@ lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
-vim.cmd([[
-    nnoremap <leader>h :wincmd h<CR>                                                
-    nnoremap <leader>j :wincmd j<CR>                                                
-    nnoremap <leader>k :wincmd k<CR>                                                
-    nnoremap <leader>l :wincmd l<CR>                                                
-    " Move things up and down
-    " This mapping depends on wether you are in mac or in other os 
-    nnoremap ¶ :m .+1<CR>==
-    nnoremap § :m .-2<CR>==
-    inoremap ¶ <Esc>:m .+1<CR>==gi
-    inoremap § <Esc>:m .-2<CR>==gi
-    vnoremap ¶ :m '>+1<CR>gv=gv
-    vnoremap § :m '<-2<CR>gv=gv1
-    " Indent visual with tab and shift tab
-    vmap <Tab> > gv
-    vmap <S-Tab> < gv
-]])
-
-vim.cmd([[
-syntax on
-let python_highlight_all=1
-set guicursor=i:
-set noerrorbells
-set tabstop =4 softtabstop=4
-set shiftwidth=4
-set expandtab 
-set smartindent
-set nu
-set nowrap
-set scrolloff=15
-set ignorecase
-set smartcase
-set noswapfile
-]])
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
@@ -137,10 +103,10 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-   { command = "black", filetypes = { "python" } }
--- { command = "isort", filetypes = { "python" } },
+-- local formatters = require "lvim.lsp.null-ls.formatters"
+-- formatters.setup {
+--   { command = "black", filetypes = { "python" } },
+--   { command = "isort", filetypes = { "python" } },
 --   {
 --     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 --     command = "prettier",
@@ -150,12 +116,12 @@ formatters.setup {
 --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
 --     filetypes = { "typescript", "typescriptreact" },
 --   },
-}
+-- }
 
 -- -- set additional linters
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-{ command = "flake8", filetypes = { "python" } },
+-- local linters = require "lvim.lsp.null-ls.linters"
+-- linters.setup {
+--   { command = "flake8", filetypes = { "python" } },
 --   {
 --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 --     command = "shellcheck",
@@ -168,7 +134,7 @@ linters.setup {
 --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
 --     filetypes = { "javascript", "python" },
 --   },
-}
+-- }
 
 -- Additional Plugins
 -- lvim.plugins = {
