@@ -1,9 +1,20 @@
 # Yabai
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
-brew services start yabai 
-brew services start skhd
 
+
+ln -nfs ~/.DotFiles/yabai/ ~/.config/yabai
+chmod +x ~/.config/yabai/yabairc
+
+
+cd ~/
+git clone git@github.com:koekeishiya/limelight.git
+cd limelight
+make
+cp bin/limelight /usr/local/bin/limelight
+cd ~/
+ln -nfs ~/.DotFiles/limelight/ ~/.config/limelight
+limelight --config ~/.config/limelight/limelightrc
 # Python code formatter
 brew install black
 brew install tmux
@@ -17,3 +28,8 @@ pip3 install pylint
 
 # Vim compabilities with plugins
 brew install ripgrep
+
+
+# Start services
+brew services start yabai 
+brew services start skhd
