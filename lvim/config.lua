@@ -35,6 +35,7 @@ vim.cmd([[
 vim.cmd([[
 syntax on
 let python_highlight_all=1
+set relativenumber
 set guicursor=i:
 set noerrorbells
 set tabstop =4 softtabstop=4
@@ -77,14 +78,14 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
--- }
+-- name = "+Trouble",
+--    r = { "<cmd>Trouble lsp_references<cr>", "References" },
+--    f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+--    d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
+--    q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+--    l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+--    w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
+--}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -111,20 +112,22 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.highlight.enabled = false
 
 -- generic LSP settings
 
 -- ---@usage disable automatic installation of servers
--- lvim.lsp.automatic_servers_installation = false
+--lvim.lsp.automatic_servers_installation = false
+
 
 -- ---@usage Select which servers should be configured manually. Requires `:LvimCacheRest` to take effect.
 -- See the full default list `:lua print(vim.inspect(lvim.lsp.override))`
--- vim.list_extend(lvim.lsp.override, { "pyright" })
+vim.list_extend(lvim.lsp.override, { "pylsp" })
+vim.list_extend(lvim.lsp.override, { "pyright" })
 
 -- ---@usage setup a server -- see: https://www.lunarvim.org/languages/#overriding-the-default-configuration
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pylsp", opts)
+require("lvim.lsp.manager").setup("pylsp")
+-- require("lvim.lsp.manager").setup("pyright")
 
 -- -- you can set a custom on_attach function that will be used for all the language servers
 -- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
@@ -139,8 +142,8 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-   { command = "black", filetypes = { "python" } }
--- { command = "isort", filetypes = { "python" } },
+   { command = "black", filetypes = { "python" } },
+   { command = "isort", filetypes = { "python" } }
 --   {
 --     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 --     command = "prettier",
@@ -155,7 +158,7 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-{ command = "flake8", filetypes = { "python" } },
+    { command = "flake8", filetypes = { "python" } },
 --   {
 --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
 --     command = "shellcheck",
